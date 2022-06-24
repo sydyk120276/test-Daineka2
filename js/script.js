@@ -24,3 +24,24 @@ window.onclick = function (event) {
     modal.style.zIndex = 0;
   }
 };
+
+document.querySelector(".burger-block").addEventListener('click', function () {
+  document.querySelector(".burger").classList.toggle("active")
+  document.querySelector(".burger-span").classList.toggle("active")
+  document.querySelector(".burger-menu").classList.toggle("active")
+})
+
+document.querySelector("#plus").addEventListener('click', function () {
+  document.querySelector(".content__form").classList.add("in-active")
+  document.querySelector(".content__description").classList.add("active")
+})
+document.querySelector("#close").addEventListener('click', function () {
+  document.querySelector(".content__form").classList.remove("in-active")
+  document.querySelector(".content__description").classList.remove("active")
+})
+
+
+$(".header-link").click(function () {
+  $(".header-link").removeClass("active");
+  $(this).addClass("active");
+});
